@@ -3,12 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@types/react": "^17.0.0",
+    "@types/react": "^18.0.0",
     "@volvo-cars/css": "^1.26.0",
     "@volvo-cars/react-headless": "^0.22.0",
+    "@volvo-cars/react-icons": "^2.0.0",
     "next": "^12.2.0",
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
     "typescript": "^4.7.0",
     "vcc-ui": "^4.10.2"
   },
