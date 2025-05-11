@@ -2,6 +2,8 @@ import React from "react";
 import Image from "next/image";
 import { Car } from "../../interfaces/Car";
 
+import Link from "next/link";
+
 type CardProps = {
   car: Car;
 };
@@ -28,12 +30,18 @@ export default function Card({ car }: CardProps) {
         height={225}
       />
       <div className="pt-16 flex-row justify-evenly card-buttons">
-        <a className="button-text font-14" data-color="accent" href="#top">
+        <a className="button-text font-14" data-color="accent" href="...">
           LEARN
         </a>
-        <a className="button-text font-14" data-color="accent" href="#top">
-          SHOP
-        </a>
+        <Link
+          className="button-text font-14"
+          data-color="accent"
+          href={`/shop/${car.id}`}
+        >
+          <a className="button-text font-14" data-color="accent">
+            SHOP
+          </a>
+        </Link>
       </div>
     </div>
   );
