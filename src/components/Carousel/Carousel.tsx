@@ -13,29 +13,72 @@ export default function Carousel() {
   const { previousButtonProps, nextButtonProps } = useSnapNavigation({
     ref,
   });
+
+  const refIndicators = useRef(null);
+
   const { indicators } = useSnapIndicators({
-    ref,
+    ref: refIndicators,
   });
+
   return (
     <section className="container-lg  py-s" data-bleed="until-md">
-      <div ref={ref} className="reel scrollbar-none ">
-        {cars.map((car, index) => (
-          <div
-            id={car.id}
-            className="snap-center transition-colors"
-            key={index}
-            style={{
-              width: "25%",
-              flex: "0 0 25%",
-              marginInlineStart: index === 0 ? "0%" : undefined,
-              marginInlineEnd: index === cars.length - 1 ? "0%" : undefined,
-            }}
-          >
-            <Card key={car.id} car={car as Car} />
-          </div>
-        ))}
-      </div>
-      <ul className="pagination-dots md:hidden lg:hidden">
+      <>
+        <div ref={ref} className="reel scrollbar-none until-lg:hidden">
+          {cars.map((car, index) => (
+            <div
+              id={car.id}
+              className="snap-center transition-colors"
+              key={index}
+              style={{
+                width: "25%",
+                flex: "0 0 25%",
+                marginInlineStart: index === 0 ? "0%" : undefined,
+                marginInlineEnd: index === cars.length - 1 ? "0%" : undefined,
+              }}
+            >
+              <Card key={car.id} car={car as Car} />
+            </div>
+          ))}
+        </div>
+        <div ref={refIndicators} className="reel scrollbar-none md:hidden">
+          {cars.map((car, index) => (
+            <div
+              id={car.id}
+              className="snap-center transition-colors"
+              key={index}
+              style={{
+                width: "100%",
+                flex: "0 0 80%",
+                marginInlineStart: index === 0 ? "10%" : undefined,
+                marginInlineEnd: index === cars.length - 1 ? "10%" : undefined,
+              }}
+            >
+              <Card key={car.id} car={car as Car} />
+            </div>
+          ))}
+        </div>
+        <div
+          ref={ref}
+          className="reel scrollbar-none lg:hidden until-md:hidden"
+        >
+          {cars.map((car, index) => (
+            <div
+              id={car.id}
+              className="snap-center transition-colors"
+              key={index}
+              style={{
+                width: "33%",
+                flex: "0 0 33%",
+                marginInlineStart: index === 0 ? "0%" : undefined,
+                marginInlineEnd: index === cars.length - 1 ? "0%" : undefined,
+              }}
+            >
+              <Card key={car.id} car={car as Car} />
+            </div>
+          ))}
+        </div>
+      </>
+      <ul className="pagination-dots md:hidden">
         {indicators.map((props, index) => {
           return (
             <li key={index}>
@@ -46,7 +89,7 @@ export default function Carousel() {
           );
         })}
       </ul>
-      <div className="container-sm flex gap-16 mt-24 justify-end mr-0">
+      <div className="container-sm flex gap-16 mt-24 justify-end mr-0 until-md:hidden">
         <IconButton
           icon="chevron-back"
           variant="outlined"
