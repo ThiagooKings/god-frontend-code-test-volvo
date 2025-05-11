@@ -20,6 +20,14 @@ export default function Carousel() {
     ref: refIndicators,
   });
 
+  const refTablet = useRef(null);
+  const {
+    previousButtonProps: previousButtonTabletProps,
+    nextButtonProps: nextButtonTabletProps,
+  } = useSnapNavigation({
+    ref: refTablet,
+  });
+
   return (
     <section className="container-lg  py-s" data-bleed="until-md">
       <>
@@ -58,7 +66,7 @@ export default function Carousel() {
           ))}
         </div>
         <div
-          ref={ref}
+          ref={refTablet}
           className="reel scrollbar-none lg:hidden until-md:hidden"
         >
           {cars.map((car, index) => (
@@ -89,18 +97,32 @@ export default function Carousel() {
           );
         })}
       </ul>
-      <div className="container-sm flex gap-16 mt-24 justify-end mr-0 until-md:hidden">
-        <IconButton
-          icon="chevron-back"
-          variant="outlined"
-          {...previousButtonProps}
-        />
-        <IconButton
-          icon="chevron-forward"
-          variant="outlined"
-          {...nextButtonProps}
-        />
-      </div>
+      <>
+        <div className="container-sm flex gap-16 mt-24 justify-end mr-0 until-lg:hidden">
+          <IconButton
+            icon="chevron-back"
+            variant="outlined"
+            {...previousButtonProps}
+          />
+          <IconButton
+            icon="chevron-forward"
+            variant="outlined"
+            {...nextButtonProps}
+          />
+        </div>
+        <div className="container-sm flex gap-16 mt-24 justify-end mr-0 lg:hidden until-md:hidden">
+          <IconButton
+            icon="chevron-back"
+            variant="outlined"
+            {...previousButtonTabletProps}
+          />
+          <IconButton
+            icon="chevron-forward"
+            variant="outlined"
+            {...nextButtonTabletProps}
+          />
+        </div>
+      </>
     </section>
   );
 }
