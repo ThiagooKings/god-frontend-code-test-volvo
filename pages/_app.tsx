@@ -1,11 +1,12 @@
-import { HelloWorld } from "../src/components/HelloWorld";
 import "../public/css/styles.css";
 import React from "react";
+import Carousel from "../src/components/Carousel/Carousel";
+import Card from "../src/components/Card/Card";
 
 function HomePage() {
   return (
     <React.StrictMode>
-      <HelloWorld />
+      <Carousel />
     </React.StrictMode>
   );
 }
