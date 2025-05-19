@@ -982,6 +982,14 @@
   resolved "https://registry.yarnpkg.com/@volvo-cars/css/-/css-1.26.0.tgz#5f826ccf2cb9c4c56ed7e4cadf9c85624dcbff4e"
   integrity sha512-NpETjKr9dsKVuoFMFQy+pFztrKuQ88MlIMnB/2igyuNFtBUhQoflY8Qw+n8UzmJCMS1HAeW866z6hhGg+BCsXw==
 
+"@volvo-cars/react-accordion@^2.3.10":
+  version "2.3.10"
+  resolved "https://registry.yarnpkg.com/@volvo-cars/react-accordion/-/react-accordion-2.3.10.tgz#d0edd078e74c0f8dfd7d840ce6e7e3e035e4902b"
+  integrity sha512-ozZBX275+aN+BlaQTXsV7bGkELmFzKb/czfU9SfOmcP6iR73ba9xhRQEaYf7CKZ89batGyjPdBuXqO0KLQiZ2A==
+  dependencies:
+    "@volvo-cars/react-headless" "^0.23.0"
+    "@volvo-cars/react-icons" "^2.0.0"
+
 "@volvo-cars/react-aria@^0.3.4":
   version "0.3.4"
   resolved "https://registry.yarnpkg.com/@volvo-cars/react-aria/-/react-aria-0.3.4.tgz#1047b33eda0497d5a1dfa6d593a32b0c65e7f310"
@@ -1000,6 +1008,14 @@
   version "0.22.0"
   resolved "https://registry.yarnpkg.com/@volvo-cars/react-headless/-/react-headless-0.22.0.tgz#fa2c46c824dd0c244ff22c7d7a2bfbfaad4ccc81"
   integrity sha512-T1akKlc6cqWmg8nNLRudVxXd/vrlqSo9S7vLpQp5HFdaM1nsRJ4wNNv2j4sR1K33jIBZPwhJvkK2g9GGpBLbNQ==
+  dependencies:
+    "@floating-ui/react-dom" "^2.1.2"
+    "@volvo-cars/react-utils" "^1.2.0"
+
+"@volvo-cars/react-headless@^0.23.0":
+  version "0.23.0"
+  resolved "https://registry.yarnpkg.com/@volvo-cars/react-headless/-/react-headless-0.23.0.tgz#17adbf8269fae5816a2215324f42849b9dc51995"
+  integrity sha512-2WJM9u91Q9uOFS8E0BbhR6Ywr1StiFb2xs6hzeS09Lv4beO18R2QHn0nyOXHYTpO+9QucumkxjqVJhgyNmsH0w==
   dependencies:
     "@floating-ui/react-dom" "^2.1.2"
     "@volvo-cars/react-utils" "^1.2.0"
