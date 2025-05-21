@@ -57,7 +57,106 @@ export default function Shop() {
           className="flex-col h-full until-lg:hidden"
           style={{ minWidth: "25rem" }}
         >
-          <div className="fex pb-32">
+          <div className="flex-col">
+            <h2 className="font-medium text-center lg:text-start font-24">
+              Escolha o nível
+            </h2>
+            <button
+              className={`mt-16 flex-col border rounded-md p-24 ${
+                openCardCore ? "border-accent-blue border-2" : ""
+              }`}
+              onClick={() => handleOpenCard("core")}
+            >
+              <div className="flex justify-between">
+                <div>
+                  <p className="font-medium">Core</p>
+                </div>
+                <div>
+                  <p>R$ 600.000</p>
+                </div>
+              </div>
+              <div
+                className={`flex-col items-start text-start ${
+                  openCardCore ? "pt-16 text-secondary" : "hidden"
+                }`}
+              >
+                <p>Incluso:</p>
+                <ul>
+                  <li>Single Motor</li>
+                  <li>Tecnologia avançada de detecção</li>
+                  <li>Adaptive Cruise Control</li>
+                  <li>Google Assistant, Google Maps e Google Play Store</li>
+                  <li>E outros mais</li>
+                </ul>
+              </div>
+            </button>
+            <button
+              className={`mt-16 flex-col border rounded-md p-24 ${
+                openCardPlus ? "border-accent-blue border-2" : ""
+              }`}
+              onClick={() => handleOpenCard("plus")}
+            >
+              <div className="flex justify-between">
+                <div>
+                  <p className="font-medium">Plus</p>
+                </div>
+                <div>
+                  <p>R$ 630.000</p>
+                </div>
+              </div>
+              <div
+                className={`flex-col items-start text-start ${
+                  openCardPlus ? "pt-16 text-secondary" : "hidden"
+                }`}
+              >
+                <p>Equipamento Core e ainda:</p>
+                <ul>
+                  <li>Single Motor Extended Range</li>
+                  <li>Porta-malas elétrico</li>
+                  <li>Iluminação interior, padrão alto</li>
+                  <li>Medição de qualidade do ar</li>
+                  <li>E outros mais</li>
+                </ul>
+              </div>
+            </button>
+            <button
+              className={`mt-16 flex-col border rounded-md p-24 ${
+                openCardUltra ? "border-accent-blue border-2" : ""
+              }`}
+              onClick={() => handleOpenCard("ultra")}
+            >
+              <div className="flex justify-between">
+                <div>
+                  <p className="font-medium">Ultra</p>
+                </div>
+                <div>
+                  <p>R$ 699.000</p>
+                </div>
+              </div>
+              <div
+                className={`flex-col items-start text-start ${
+                  openCardUltra ? "pt-16 text-secondary" : "hidden"
+                }`}
+              >
+                <p>Equipamento Plus e ainda:</p>
+                <ul>
+                  <li>Single Motor Extended Range</li>
+                  <li>Teto panorâmico</li>
+                  <li>Park Pilot Assist</li>
+                  <li>Câmera de 360°, visualização 3D</li>
+                  <li>E outros mais</li>
+                </ul>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+
+/**
+<div className="pb-32">
             <h2 className="font-medium text-center lg:text-start font-24">
               Escolha o nível
             </h2>
@@ -96,8 +195,4 @@ export default function Shop() {
               </SteppedAccordionDetails>
             </SteppedAccordion>
           </div>
-        </div>
-      </div>
-    </>
-  );
-}
+ */
