@@ -10,7 +10,6 @@ type CardProps = {
 
 export default function Card({ car }: CardProps) {
   return (
-    // parte relacionada a containers será colocada em outro componente depois
     <div className="flex-col px-8">
       <div className="body-type">
         <span className="text-secondary font-14 ">

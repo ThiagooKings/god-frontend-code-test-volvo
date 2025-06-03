@@ -1,9 +1,4 @@
 import { useRouter } from "next/router";
-import {
-  SteppedAccordion,
-  SteppedAccordionDetails,
-  SteppedAccordionSummary,
-} from "@volvo-cars/react-accordion";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -150,6 +145,97 @@ export default function Shop() {
             </button>
           </div>
         </div>
+      </div>
+      <div className="mx-24 xl:mx-64">
+        <div className="pt-48 pb-48">
+          <h2>Adicionar equipamento adicional</h2>
+        </div>
+
+        <section className="grid md:grid-cols-2 lg:grid-cols-4 gap-x-gutter">
+          <div className="flex-col mb-32">
+            <Image
+              src="/images/acessorios/Dog_harness.avif"
+              alt="Descrição da imagem"
+              width={300}
+              height={225}
+              objectFit="cover"
+            />
+
+            <small className="micro text-start text-secondary pt-16">
+              Acessório
+            </small>
+            <p className="p-0">
+              <b>Cinto para cães</b>
+            </p>
+            <p className="p-0">R$ 900,00</p>
+            <button className="mt-8 w-fit py-4 px-16 border rounded-md border-always-black ">
+              <b>Adicionar</b>
+            </button>
+          </div>
+
+          <div className="flex-col mb-32">
+            <Image
+              src="/images/acessorios/Charging_cable_bag.avif"
+              alt="Descrição da imagem"
+              width={300}
+              height={225}
+              objectFit="cover"
+            />
+
+            <small className="micro text-start text-secondary pt-16">
+              Acessório
+            </small>
+            <p className="p-0">
+              <b>Sacola para cabo de carregamento</b>
+            </p>
+            <p className="p-0">R$ 500,00</p>
+            <button className="mt-8 w-fit py-4 px-16 border rounded-md border-always-black ">
+              <b>Adicionar</b>
+            </button>
+          </div>
+
+          <div className="flex-col mb-32">
+            <Image
+              src="/images/acessorios/Roof_box_Space_Design.avif"
+              alt="Descrição da imagem"
+              width={300}
+              height={225}
+              objectFit="cover"
+            />
+
+            <small className="micro text-start text-secondary pt-16">
+              Acessório
+            </small>
+            <p className="p-0">
+              <b>Bagageiro de teto Travel</b>
+            </p>
+            <p className="p-0">R$ 2.900,00</p>
+            <button className="mt-8 w-fit py-4 px-16 border rounded-md border-always-black ">
+              <b>Adicionar</b>
+            </button>
+          </div>
+
+          <div className="flex-col mb-32">
+            <Image
+              src="/images/acessorios/Bumper_cover.avif"
+              alt="Descrição da imagem"
+              width={300}
+              height={225}
+              objectFit="cover"
+            />
+
+            <small className="micro text-start text-secondary pt-16">
+              Acessório
+            </small>
+            <p className="p-0">
+              <b>Cobertura de para-choques</b>
+            </p>
+            <p className="p-0">R$ 950,00</p>
+            <button className="button-outlined mt-8 w-fit">
+              <b>Adicionar</b>
+            </button>
+          </div>
+        </section>
       </div>
     </>
   );
