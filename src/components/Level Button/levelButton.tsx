@@ -4,6 +4,7 @@ type LevelButtonProps = {
   type: string;
   titleDescriptionItens: string;
   descriptionItens: string[];
+  onClick: () => void;
 };
 
 export default function LevelButton({
@@ -12,19 +13,21 @@ export default function LevelButton({
   type,
   titleDescriptionItens,
   descriptionItens,
+  onClick,
 }: LevelButtonProps) {
   return (
     <button
       className={`mt-16 flex-col border rounded-md p-24 ${
         isActive ? "border-accent-blue border-2" : ""
       }`}
+      onClick={onClick}
     >
       <div className="flex justify-between">
         <div>
           <p className="font-medium">{type}</p>
         </div>
         <div>
-          <p>{value}</p>
+          <p>R$ {value}</p>
         </div>
       </div>
       <div

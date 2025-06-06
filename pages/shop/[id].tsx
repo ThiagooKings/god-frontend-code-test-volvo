@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import Image from "next/image";
 import { useState } from "react";
+import LevelButton from "../../src/components/Level Button/levelButton";
 
 export default function Shop() {
   const [openCardCore, setOpenCardCore] = useState(true);
@@ -56,93 +57,51 @@ export default function Shop() {
             <h2 className="font-medium text-center lg:text-start font-24">
               Escolha o nível
             </h2>
-            <button
-              className={`mt-16 flex-col border rounded-md p-24 ${
-                openCardCore ? "border-accent-blue border-2" : ""
-              }`}
+
+            <LevelButton
+              isActive={openCardCore}
+              value={600.0}
+              type={"Core"}
+              titleDescriptionItens={"Incluso"}
+              descriptionItens={[
+                "Single Motor",
+                "Tecnologia avançada de detecção",
+                "Adaptive Cruise Control",
+                "Google Assistant, Google Maps e Google Play Store",
+                "E outros mais",
+              ]}
               onClick={() => handleOpenCard("core")}
-            >
-              <div className="flex justify-between">
-                <div>
-                  <p className="font-medium">Core</p>
-                </div>
-                <div>
-                  <p>R$ 600.000</p>
-                </div>
-              </div>
-              <div
-                className={`flex-col items-start text-start ${
-                  openCardCore ? "pt-16 text-secondary" : "hidden"
-                }`}
-              >
-                <p>Incluso:</p>
-                <ul>
-                  <li>Single Motor</li>
-                  <li>Tecnologia avançada de detecção</li>
-                  <li>Adaptive Cruise Control</li>
-                  <li>Google Assistant, Google Maps e Google Play Store</li>
-                  <li>E outros mais</li>
-                </ul>
-              </div>
-            </button>
-            <button
-              className={`mt-16 flex-col border rounded-md p-24 ${
-                openCardPlus ? "border-accent-blue border-2" : ""
-              }`}
+            />
+
+            <LevelButton
+              isActive={openCardPlus}
+              value={630.0}
+              type={"Plus"}
+              titleDescriptionItens={"Equipamento Core e ainda:"}
+              descriptionItens={[
+                "Single Motor Extended Range",
+                "Porta-malas elétrico",
+                "Iluminação interior, padrão alto",
+                "Medição de qualidade do ar",
+                "E outros mais",
+              ]}
               onClick={() => handleOpenCard("plus")}
-            >
-              <div className="flex justify-between">
-                <div>
-                  <p className="font-medium">Plus</p>
-                </div>
-                <div>
-                  <p>R$ 630.000</p>
-                </div>
-              </div>
-              <div
-                className={`flex-col items-start text-start ${
-                  openCardPlus ? "pt-16 text-secondary" : "hidden"
-                }`}
-              >
-                <p>Equipamento Core e ainda:</p>
-                <ul>
-                  <li>Single Motor Extended Range</li>
-                  <li>Porta-malas elétrico</li>
-                  <li>Iluminação interior, padrão alto</li>
-                  <li>Medição de qualidade do ar</li>
-                  <li>E outros mais</li>
-                </ul>
-              </div>
-            </button>
-            <button
-              className={`mt-16 flex-col border rounded-md p-24 ${
-                openCardUltra ? "border-accent-blue border-2" : ""
-              }`}
+            />
+
+            <LevelButton
+              isActive={openCardUltra}
+              value={699.0}
+              type={"Ultra"}
+              titleDescriptionItens={"Equipamento Plus e ainda:"}
+              descriptionItens={[
+                "Single Motor Extended Range",
+                "Teto panorâmico",
+                "Park Pilot Assist",
+                "Câmera de 360°, visualização 3D",
+                "E outros mais",
+              ]}
               onClick={() => handleOpenCard("ultra")}
-            >
-              <div className="flex justify-between">
-                <div>
-                  <p className="font-medium">Ultra</p>
-                </div>
-                <div>
-                  <p>R$ 699.000</p>
-                </div>
-              </div>
-              <div
-                className={`flex-col items-start text-start ${
-                  openCardUltra ? "pt-16 text-secondary" : "hidden"
-                }`}
-              >
-                <p>Equipamento Plus e ainda:</p>
-                <ul>
-                  <li>Single Motor Extended Range</li>
-                  <li>Teto panorâmico</li>
-                  <li>Park Pilot Assist</li>
-                  <li>Câmera de 360°, visualização 3D</li>
-                  <li>E outros mais</li>
-                </ul>
-              </div>
-            </button>
+            />
           </div>
         </div>
       </div>
@@ -168,7 +127,7 @@ export default function Shop() {
               <b>Cinto para cães</b>
             </p>
             <p className="p-0">R$ 900,00</p>
-            <button className="mt-8 w-fit py-4 px-16 border rounded-md border-always-black ">
+            <button className="button-outlined mt-8 w-fit h-fit py-4 px-16">
               <b>Adicionar</b>
             </button>
           </div>
@@ -189,7 +148,7 @@ export default function Shop() {
               <b>Sacola para cabo de carregamento</b>
             </p>
             <p className="p-0">R$ 500,00</p>
-            <button className="mt-8 w-fit py-4 px-16 border rounded-md border-always-black ">
+            <button className="button-outlined mt-8 w-fit h-fit py-4 px-16">
               <b>Adicionar</b>
             </button>
           </div>
@@ -210,7 +169,7 @@ export default function Shop() {
               <b>Bagageiro de teto Travel</b>
             </p>
             <p className="p-0">R$ 2.900,00</p>
-            <button className="mt-8 w-fit py-4 px-16 border rounded-md border-always-black ">
+            <button className="button-outlined mt-8 w-fit h-fit py-4 px-16">
               <b>Adicionar</b>
             </button>
           </div>
@@ -231,7 +190,7 @@ export default function Shop() {
               <b>Cobertura de para-choques</b>
             </p>
             <p className="p-0">R$ 950,00</p>
-            <button className="button-outlined mt-8 w-fit">
+            <button className="button-outlined mt-8 w-fit h-fit py-4 px-16">
               <b>Adicionar</b>
             </button>
           </div>
